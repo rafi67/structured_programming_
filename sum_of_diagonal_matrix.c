@@ -13,7 +13,10 @@ int main() {
     }
 
     for(int i=0, j=n-1; i<n; ++i, --j) {
-        sum += a[i][i]+a[j][j];
+        if(i!=j)
+            sum += a[i][i]+a[j][j];
+        else if(i==j) 
+            sum += a[i][i];
     }
 
     printf("%d\n", sum);
