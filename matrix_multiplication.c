@@ -21,13 +21,13 @@ int main() {
         for(int j=0; j<n4; ++j) scanf("%d", &B[i][j]);
     }
 
-    for(int i=0; i<n1; ++i) for(int j=0; j<n4; ++j) C[i][j] = 0;
+    //for(int i=0; i<n1; ++i) for(int j=0; j<n4; ++j) C[i][j] = 0;
     for(int i=0; i<n4; ++i) {
         int i2 = 0;
         for(int j = 0; j<n1; ++j) {
             int temp = 0;
             for(int k=0; k<n2; ++k) temp += A[i2][k]*B[k][i];
-            C[j][i] += temp;
+            C[j][i] = temp;
             temp = 0;
             if(i2!=n2) ++i2;
         }
