@@ -22,6 +22,11 @@ int main() {
     for(int i=0; i<n; ++i) if(a2[i]!=1) ++count; 
 
     printf("Number of unique value is %d\n", count);
+    printf("Unique value are:\n");
+
+    for(int i=0; i<n; ++i) 
+        if(a2[i]!=1) printf("%d ", a[i]);
+    printf("\n");
 
     return 0;
 
